@@ -60,6 +60,22 @@ use OmniAuth::Builder do
 end
 ```
 
+## Authentization Verification
+
+Create an xml file and make it available at `YOUR_URL/xrds.xml`. The file should contain this text (don't forget to replace YOUR_URL):
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<xrds:XRDS xmlns:xrds="xri://$xrds" xmlns="xri://$xrd*($v*2.0)">
+   <XRD>
+     <Service>
+       <Type>http://specs.openid.net/auth/2.0/return_to</Type>
+       <URI>***YOUR_URL***/auth/mojeid/callback</URI>
+     </Service>
+   </XRD>
+</xrds:XRDS>
+```
+
 ## Usage
 
 Simply point users to `/auth/mojeid` which will redirect them to MojeID.cz website to prompt them for their profile information.
