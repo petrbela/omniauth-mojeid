@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.summary = %Q{MojeID strategy for OmniAuth}
   gem.description = %q{OmniAuth strategy to work with http://www.mojeid.cz}
   gem.homepage = 'https://github.com/petrbela/omniauth-mojeid'
-  
+
   gem.authors = ['Petr Bela']
   gem.email = 'github@petrbela.com'
   gem.license = "MIT"
@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
 
   gem.required_rubygems_version = Gem::Requirement.new('>= 1.3.6') if gem.respond_to?(:required_rubygems_version=)
 
-  gem.add_dependency 'omniauth', '~> 1.1.4'
+  gem.add_dependency 'omniauth' #, '~> 1.1.4'
   gem.add_dependency 'rack-openid', '~> 1.3.1'
   gem.add_dependency 'ruby-openid', '~> 2.1.8'
   gem.add_dependency 'omniauth-openid', '~> 1.0.1'
